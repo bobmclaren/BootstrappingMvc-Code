@@ -18,6 +18,7 @@ namespace SimpleSite.Controllers
             var user = manager.FindById(User.Identity.GetUserId());
             user.CssTheme = themename;
             manager.Update(user);
+            userStore.Context.SaveChanges();
 
             if (Request.UrlReferrer != null)
             {
