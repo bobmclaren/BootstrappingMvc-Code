@@ -15,7 +15,7 @@
 
                     var searchTerm = $("#search-text").val();
 
-                    $.get("SearchPeople", { searchText: searchTerm })
+                    $.get('@Url.Action("SearchPeople")', { searchText: searchTerm })
                         .success(function (data) {
                             $("#people-data").html(data);
                         });
